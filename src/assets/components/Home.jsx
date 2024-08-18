@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 import Courses from "./Courses";
 import Free from "./Free";
 
+// SEO optimized images
 import topImg from "../images/top-img.png";
+
+// React Helmet for SEO meta tags
+import { Helmet } from "react-helmet";
+
 const Home = () => {
   const navigate = useNavigate();
   const freeSectionRef = useRef(null);
@@ -17,15 +22,55 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        {/* Primary SEO Meta Tags */}
+        <title>Online Quran Academy for Kids - Quran Learning & Classes</title>
+        <meta
+          name="description"
+          content="Join our Online Quran Academy for Kids. We offer Quran classes with Tajweed and Tarteel for children. Start your child's Quranic journey today!"
+        />
+        <meta
+          name="keywords"
+          content="Online Quran Academy, Quran Classes for Kids, Learn Quran Online for Children, Quran Teaching for Kids, Online Quran Tutor"
+        />
+        <meta name="author" content="Online Quran Scholars" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Online Quran Academy for Kids - Quran Learning & Classes"
+        />
+        <meta
+          property="og:description"
+          content="Enroll in our Quranic lessons with expert scholars. Tailored Quran classes for children."
+        />
+        <meta property="og:image" content={topImg} />
+        <meta property="og:url" content="https://www.yourwebsite.com/" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Online Quran Academy for Kids" />
+        <meta
+          property="twitter:description"
+          content="Learn Quran Online with our expert Quran tutors. Start your Quranic journey with tailored lessons for children."
+        />
+        <meta property="twitter:image" content={topImg} />
+      </Helmet>
+
       <div className="home">
         <div className="home_left">
-          <img src={topImg} alt="" height="300" />
+          <img
+            src={topImg}
+            alt="Online Quran Classes for Kids"
+            height="300"
+          />
         </div>
         <div className="home_right">
           <h2>قال النبي صلى الله عليه وسلم</h2>
           <h1>طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</h1>
           <p>
-            Seeking the religious knowledge is an <br /> obligation upon every
+            Seeking religious knowledge is an <br /> obligation upon every
             Muslim.
           </p>
           <div className="buttons">
@@ -46,25 +91,34 @@ const Home = () => {
             Start to learn in <br />
             three easy steps
           </p>
-          <span>SHEDULE DEMO CLASS TODAY</span>
+          <span>SCHEDULE DEMO CLASS TODAY</span>
         </div>
         <div className="sectionRight">
           <div className="box">
-            <img src="/src/assets/images/google-forms.png" alt="" />
+            <img
+              src="/src/assets/images/google-forms.png"
+              alt="Fill Contact Form for Quran Classes"
+            />
             <div className="text">
               <h1>One.</h1>
               <p>Fill Contact form or Call at our numbers.</p>
             </div>
           </div>
           <div className="box">
-            <img src="/src/assets/images/presentation.png" alt="" />
+            <img
+              src="/src/assets/images/presentation.png"
+              alt="Get Free Quran Trial Classes"
+            />
             <div className="text">
               <h1>Two.</h1>
               <p>Get free trial classes at your desired time.</p>
             </div>
           </div>
           <div className="box">
-            <img src="/src/assets/images/students-cap.png" alt="" />
+            <img
+              src="/src/assets/images/students-cap.png"
+              alt="Sign Up for Quran Learning"
+            />
             <div className="text">
               <h1>Three.</h1>
               <p>Sign Up if you like & start learning Quran.</p>

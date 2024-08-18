@@ -3,14 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Contact from "./Contact";
 import { useNavigate } from "react-router-dom";
+
 const Question = () => {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleContact = () => {
     navigate("/contact");
-    window.scrollTo(0, 0); // This will scroll the page to the top
+    window.scrollTo(0, 0); // Scroll to the top of the page
   };
-  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAnswer = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -22,7 +23,6 @@ const Question = () => {
       answer:
         "At Online Quran Tutors, mastering Arabic and perfecting Arabic phonetics are central to our teaching approach. Our dynamic and adaptive learning process ensures that we continually adjust materials and methodologies to meet each student's unique progress and needs.",
     },
-
     {
       question: "Are your teachers available for students of all genders?",
       answer:
@@ -60,6 +60,8 @@ const Question = () => {
                   <button
                     className="question"
                     onClick={() => toggleAnswer(index)}
+                    aria-expanded={activeIndex === index}
+                    aria-controls={`faq-answer-${index}`}
                   >
                     <FontAwesomeIcon
                       icon={activeIndex === index ? faChevronUp : faChevronDown}
@@ -69,7 +71,11 @@ const Question = () => {
                     {faq.question}
                   </button>
                   {activeIndex === index && (
-                    <div className="answer">
+                    <div
+                      id={`faq-answer-${index}`}
+                      className="answer"
+                      role="region"
+                    >
                       <p>{faq.answer}</p>
                     </div>
                   )}

@@ -12,137 +12,130 @@ const Navbar = () => {
   const handleClick = () => {
     navigate("/");
   };
+
   return (
     <>
-      <div className="navvv">
-        <nav>
-          <div className="logo">
-            <img
-              onClick={handleClick}
-              src="./images/Group-25.jpeg"
-              alt="logo"
-              style={{ cursor: "pointer" }}
-            />
-          </div>
-
-          <ul>
-            <li>
-              <NavLink
-                to="/"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/packages"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Packages
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to="/courses"
-                activeClassName="active"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Courses
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to="/blog"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-          <div
-            className={`hamburger ${isNavActive ? "hamburger-active" : ""}`}
-            onClick={toggleNav}
-          >
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-          </div>
-        </nav>
-        <div className={`menubar ${isNavActive ? "active" : ""}`}>
-          <ul>
-            <li>
-              <NavLink
-                to="/"
-                onClick={toggleNav}
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/packages"
-                onClick={toggleNav}
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Packages
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to="/courses"
-                onClick={toggleNav}
-                activeClassName="active"
-                style={({ isActive }) => ({
-                  color: isActive ? "#13B3AD" : "initial",
-                })}
-              >
-                Courses
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/blog" onClick={toggleNav} activeClassName="active">
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                onClick={toggleNav}
-                activeClassName="active"
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
+      <nav className="navbar">
+        <div className="logo">
+          <img
+            onClick={handleClick}
+            src="./images/Group-25.jpeg"
+            alt="Website Logo"
+            style={{ cursor: "pointer" }}
+            aria-label="Navigate to Home"
+          />
         </div>
+
+        <ul className={`nav-links ${isNavActive ? "active" : ""}`}>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/packages"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Packages
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/courses"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Courses
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Blog
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Contact Us
+            </NavLink>
+          </li>
+        </ul>
+
+        <div
+          className={`hamburger ${isNavActive ? "hamburger-active" : ""}`}
+          onClick={toggleNav}
+          aria-label="Toggle navigation"
+        >
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      <div className={`menubar ${isNavActive ? "active" : ""}`}>
+        <ul>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/packages"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Packages
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/courses"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Courses
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Blog
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              onClick={toggleNav}
+            >
+              Contact Us
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </>
   );
