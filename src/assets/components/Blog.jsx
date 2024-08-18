@@ -7,7 +7,7 @@ const Blog = () => {
       <div className="right_blog">
         <div className="blog_container">
           <img
-            src="/public/10-Reasons-Why-to-Learn-Quran-2022.jpg"
+            src="../images/10-Reasons-Why-to-Learn-Quran-2022.jpg"
             alt="Why Learn Quran"
             className="blog-image"
           />

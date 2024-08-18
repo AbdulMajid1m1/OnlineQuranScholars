@@ -8,7 +8,7 @@ const Courses = () => {
         <h1 style={{ textAlign: "center" }}>Popular Courses</h1>
         <div className="cards">
           <div className="card1">
-            <img src="/assets/images/course-img1.png" alt="" height="300" />
+            <img src="../images/course-img1.png" alt="" height="300" />
             <h1>نوراني القاعدة</h1>
             <h2>BASIC & ARABIC ALPHABET</h2>
             <p>
@@ -19,7 +19,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="card2">
-            <img src="/assets/images/course-img2.png" alt="" height="300" />
+            <img src="../images/course-img2.png" alt="" height="300" />
             <h1>تجويد القرآن</h1>
             <h2>RULES OF PRONOUNCIATION</h2>
             <p>
@@ -30,7 +30,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="card3">
-            <img src="/assets/images/course-img3.png" alt="" height="300" />
+            <img src="../images/course-img3.png" alt="" height="300" />
             <h1>حفظ القرآن</h1>
             <h2>AND RECITATION</h2>
             <br />
@@ -42,7 +42,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="card4">
-            <img src="/assets/images/course-img6.png" alt="" height="300" />
+            <img src="../images/course-img6.png" alt="" height="300" />
             <h1>التفسير والترجمة</h1>
             <h2>TAFSEER AND TRANSLATION</h2>
             <p>

@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="logo">
             <img
               onClick={handleClick}
-              src="/src/assets/images/Group-25.jpeg"
+              src="./images/Group-25.jpeg"
               alt="logo"
               style={{ cursor: "pointer" }}
             />

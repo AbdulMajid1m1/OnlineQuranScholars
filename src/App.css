@@ -1870,6 +1870,15 @@ justify-content: space-around;
   text-align: center;
   margin-top: 20px;
  }
+
+ .box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: fit-content;
+}
+.box p {
+  font-size: 30px;
+}
  .description{
   width: 899px;
   /* width: 100%;
@@ -1922,9 +1931,11 @@ text-align: center;
   align-items: center;
  }
  .home_right{
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-left: 460px;
   margin-bottom: 20px;
   text-align: center;
@@ -1983,15 +1994,18 @@ text-align: center;
   width: auto;
  }
  .read{
+  font-size: 35px;
   width: fit-content;
   display: flex;
   align-items: center;
 justify-content: center;
  }
  .homeLeft{
+  height: fit-content;
   width: 80%;
  }
  .col-md-3 {
+  height: fit-content;
   width: 791px;
   display: flex;
   align-items: center;
@@ -2001,6 +2015,9 @@ justify-content: center;
 }
 
 @media (max-width: 786px) {
+  nav{
+    height: 18vh;
+  }
   .navitem ul {
     display: none;
     flex-direction: column;
@@ -2031,10 +2048,78 @@ justify-content: center;
     justify-content:end;
   ;
   }
+  .home .home_right h2 {
+    font-size: 50px;
+}
+/* .home .home_right {
+  flex-direction: column;
+  color: white;
+  width: 208vw;
+} */
+.home .home_right {
+  display: flex; /* Ensure flexbox layout is applied */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  color: white;
+  width: 100%; /* Change from 208vw to 100% to fit the parent container */
+  height: 100vh; /* Ensure the height fills the viewport */
+  text-align: center; /* Center text within its container */
+  margin: 0 auto; /* Center the whole .home_right container if it's within another container */
+}
 
+.home .home_right h1 {
+  font-size: 40px;
+
+}
+.sectionLeft span {
+  font-size: 40px;
+}
+.home .home_right p {
+  font-size: 40px;
+  line-height: 70px;
+}
+.btn1 {
+  width: 270px;
+  font-size: 32px;
+  height: 70px;
+}
+.btn2{
+  width: 270px;
+  font-size: 30px;
+  height: 70px;
+}
   p {
     font-size: 12px;
   }
+  .sectionLeft {
+   height: fit-content;
+}
+.sectionRight {
+  height: fit-content;
+}
+.description h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.description p {
+  font-size: 30px;
+  line-height: 40px;
+}
+.packages h1 {
+  margin-top: 50px;
+  font-size: 50px;
+  /* margin-left: 540px; */
+}
+.price-head h2 {
+  font-size: 35px;
+}
+.single-price p {
+ font-size: 40px;
+}
+
+
+
 }
 /* Custom CSS for background color change and positioning */
 @media (max-width: 993px) {

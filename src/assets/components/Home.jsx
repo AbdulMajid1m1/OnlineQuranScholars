@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Courses from "./Courses";
 import Free from "./Free";
 
+import topImg from "../images/top-img.png";
 const Home = () => {
   const navigate = useNavigate();
   const freeSectionRef = useRef(null);
@@ -18,7 +19,7 @@ const Home = () => {
     <>
       <div className="home">
         <div className="home_left">
-          <img src="/assets/images/top-img.png" alt="" height="300" />
+          <img src={topImg} alt="" height="300" />
         </div>
         <div className="home_right">
           <h2>قال النبي صلى الله عليه وسلم</h2>
@@ -45,7 +46,7 @@ const Home = () => {
             Start to learn in <br />
             three easy steps
           </p>
-          <span>SHEDULE DEMO CLASS TODAY -&gt;</span>
+          <span>SHEDULE DEMO CLASS TODAY</span>
         </div>
         <div className="sectionRight">
           <div className="box">
