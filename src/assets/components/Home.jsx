@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <div className="home">
         <div className="home_left">
-          <img src="/src/assets/images/top-img.png" alt="" height="300" />
+          <img src="/assets/images/top-img.png" alt="" height="300" />
         </div>
         <div className="home_right">
           <h2>قال النبي صلى الله عليه وسلم</h2>
